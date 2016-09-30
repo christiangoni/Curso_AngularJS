@@ -1,0 +1,35 @@
+<html ng-app="CustomDirective">
+<head>  
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>primera directiva angularJS
+    </title>
+    <!-- add angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="directives.js"></script>
+    <script src="controllers.js"></script>
+    <script src="https://code.angularjs.org/1.5.8/angular-route.min.js"></script>
+    <style>
+            .circular{
+                height:100px;
+                width:100px;
+                border-radius:50%;
+                display: inline-block;
+            }
+
+            .no-list{
+                list-style-type: none;
+            }
+
+            body,html{
+                text-align:center;
+                background-color: #eee;
+                margin: 0px;
+            }
+    </style>
+</head>
+<body>
+    <div ng-view></div>
+</body>
+</html>
