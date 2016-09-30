@@ -1,0 +1,33 @@
+<html ng-app="myfirstapp">
+<head>
+        <meta charset="utf-8">
+        <style>
+            .animated{
+                opacity: 1;
+                overflow:hidden;
+                max-height:auto;
+                transition: all 4s;
+            }
+            .animated.ng-hide{
+                display:block !important;
+                opacity =   0;
+                max-height:0px !important;
+            }
+        </style>
+        <title>Primera pagina de angular</title>
+        <!-- add angular -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <!-- add my controller -->
+        <script src="controller.js"></script>
+</head>
+<body ng-controller="firstcontroller">
+    <div ng-show="loading">Cargando...</div>
+    <div ng-show="!loading && post.length <= 0">No se encontraron resultados</div>
+        <ul ng-show="posts.length > 0" class="animated">
+            <li ng-repeat="post in posts">
+                <h2>{{post.title}}</h2>
+                <p>{{post.body}}</p>
+            </li>
+        </ul>                
+</body>
+</html>

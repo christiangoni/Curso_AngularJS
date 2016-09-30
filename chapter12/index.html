@@ -1,0 +1,27 @@
+<html ng-app="myfirstapp">
+<head>
+        <meta charset="utf-8">
+        <title>Child Controllers</title>
+        <!-- add angular -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <!-- add my controller -->
+        <script src="controller.js"></script>
+</head>
+<body ng-controller="firstcontroller">
+    <p>
+        <strong>Valor de controller: </strong>{{nombre}}
+    </p>  
+    <p>
+        <strong>Valor de root con parent: </strong>{{$parent.nombre}}
+    </p>        
+    <div ng-controller="childcontroller">
+        <p>
+            <strong>Valor de hijo:</strong> {{nombre}}
+        </p>
+        <p>
+            <strong>Valor de padre:</strong> {{$parent.nombre}}
+        </p>
+        <input type="text" ng-model="$parent.nombre">
+    </div>
+</body>
+</html>

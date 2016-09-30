@@ -1,0 +1,25 @@
+<html ng-app="myfirstapp">
+<head>
+        <meta charset="utf-8">
+        <title>Hola controller</title>
+        <!-- add angular -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <!-- add my controller -->
+        <script src="controller.js"></script>
+</head>
+<body ng-controller="firstcontroller">
+    <!-- indicar con que variable del scope del controlador se sincroniza --> 
+    <input type="text" ng-model="nuevoComentario.comentario"><br>
+    <input type="text" ng-model="nuevoComentario.usuario">
+    <!-- indica funcion del controlador a ejecutar, addeventlistener js -->
+    <button ng-click="addComentario()">Agregar comentario</button>
+    <h3>Comentarios</h3>
+    <ul>
+        <!-- foreach X in array de scope -->
+        <li ng-repeat="comentario in comentarios">
+            <!-- campos de X del array del scope -->
+            {{comentario.comentario}} - <strong>{{comentario.usuario}}</strong>
+        </li>
+    </ul>
+</body>
+</html>

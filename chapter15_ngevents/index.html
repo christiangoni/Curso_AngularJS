@@ -1,0 +1,33 @@
+<html ng-app>
+<head>  
+    <style>
+        .hover{
+            background-color: rgb(200,50,50);
+        }
+        .no-hover{
+            background-color: rgb(50,200,50);
+        }        
+    </style>
+    <meta charset="utf-8">
+    <title>ng Events
+    </title>
+    <!-- add angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+</head>
+<body>
+    <button ng-mouseover="bandera = true" ng-mouseout="bandera = false">
+        Hover me
+    </button><br>
+        <button ng-click="bandera = !bandera">
+        Hover me
+    </button><br>
+        <button ng-click="bandera = !bandera" ng-class="{'hover': bandera, 'no-hover': !bandera}">
+        Hover me
+    </button>
+
+    <span ng-show="bandera">&lt;- click me </span>
+    <p>
+        {{bandera | json}}
+    </p>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html ng-app="myfirstapp">
+<head>
+        <meta charset="utf-8">
+        <title>Primera pagina de angular</title>
+        <!-- add angular -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <!-- add my controller -->
+        <script src="controller.js"></script>
+</head>
+<body ng-controller="firstcontroller">
+        <ul>
+            <li ng-repeat="post in posts">
+                <h2>{{post.title}}</h2>
+                <p>{{post.body}}</p>
+            </li>
+        </ul>                
+</body>
+</html>
